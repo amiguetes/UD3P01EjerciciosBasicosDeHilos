@@ -3,15 +3,13 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>es.cipfpbatoi.dam.psp.ud3</groupId>
+        <artifactId>UD3P01EjerciciosBasicosDeHilos</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
 
-    <groupId>es.cipfpbatoi.dam.psp.ud3</groupId>
-    <artifactId>UD3P01EjerciciosBasicosDeHilos</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <packaging>pom</packaging>
-    <modules>
-        <module>Ejercicio1</module>
-        <module>Ejercicio2</module>
-    </modules>
+    <artifactId>Ejercicio2</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>
