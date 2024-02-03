@@ -17,16 +17,23 @@ public class ThreadHorse implements Runnable{
     }
 
     public void run() {
-        try {
-            int distanciaRestante = DISTANCIA_TOTAL_METROS;
-            while (distanciaRestante > 0) {
-                distanciaRestante -= PASO_METROS;
-                System.out.println(Thread.currentThread().getName() + ": " + distanciaRestante + "m para finalizar");
+        int distanciaRestante = DISTANCIA_TOTAL_METROS;
+
+        while (distanciaRestante > 0) {
+            distanciaRestante -= PASO_METROS;
+
+            //System.out.println(Thread.currentThread().getName() + ": " + distanciaRestante + "m para finalizar");
+
+            try {
                 Thread.sleep(DESCANSO_MS);
+            } catch (InterruptedException e){
+                System.out.println(Thread.currentThread().getName() + " fue interrumpido.");
+                return;
+
             }
-            System.out.println(Thread.currentThread().getName() + ": Ha Finalizado");
-        } catch (InterruptedException e) {
-            System.out.println(Thread.currentThread().getName() + " fue interrumpido.");
         }
+
+        System.out.println(Thread.currentThread().getName() + ": Ha Finalizado");
+
     }
 }
